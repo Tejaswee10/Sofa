@@ -106,7 +106,7 @@ section h2{
   float: right;
   margin-left: 470px;
 }
-.nav .icon {
+.nav .icon  svg{
   display: none;
 }
 
@@ -153,7 +153,7 @@ section h2{
 		margin-top: 1px;
 	}
   .nav a:not(:first-child) {display: none;}
-  .nav a.icon {
+  .nav a.icon svg {
     float: right;
     display: block;
 
@@ -164,10 +164,9 @@ section h2{
 
 
   .nav.responsive {position: relative;}
-  .nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .nav.responsive .icon  svg{
+    float: right;
+    display: block;
   }
   .nav.responsive a {
     float: none;
