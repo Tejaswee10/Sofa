@@ -16,8 +16,8 @@
   height: 1000px;
 		}
     #section2{
-  
-  height: 1000px;
+  display: none;
+  height: inherit;
     }
 
 
@@ -49,20 +49,48 @@ height: 700px;
 </head>
 
 <body >
-  <div class="nav" id="myScrollspy">
-    <a class="btn btn-lg " href="#" >
+  <div class="nav" id="myTopnav">
+    <a id="home" class="btn btn-lg " href="#" style="padding-top: 10px;">
         <img src="VisCommerce_Company_Logo-red.webp"/> Home</a>
-  <a class="btn btn-lg " href="#section1" >Configuration</a>
+  <a class="btn btn-lg " href="#section1" onclick="hidefunc()" >Configuration</a>
   
-  <a class="btn btn-lg" href="#section2" >Dimensions</a>
+  <a class="btn btn-lg" href="#section2" onclick="showfunc()">Dimensions</a>
   
   <a class="btn btn-lg" href="#" onclick="resetView()"> Reset View</a>
   <a class="btn btn-lg" href="#" onclick="InsceneLoad()">InScene View</a>
-
+  <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+  </a>-->
   
   </div>
 
-  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+
+function hidefunc(){
+  const sec1=document.getElementById("section1")
+      sec1.style.display="block";
+  const sec2=document.getElementById("section2")
+      sec2.style.display="none";
+}
+
+    function showfunc(){
+      const sec2=document.getElementById("section2")
+      sec2.style.display="block";
+      const sec1=document.getElementById("section1")
+      sec1.style.display="none";
+    }
+    
+    </script>
     
 
 
@@ -108,7 +136,7 @@ height: 700px;
            
 
 
-                  <h2 style="padding-top: 70px;"><b>Light Brown Cloth Sofa</b></h2>
+                  <h2 ><b>Light Brown Cloth Sofa</b></h2>
 
                   <br>
                   <h3 ><b>Configuration</b></h3>
@@ -119,7 +147,7 @@ height: 700px;
                                       <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                                     </svg></label>
                                   <div class="tab-content">
-                                        Customize your environment
+                                        Customize your Dimensions
                                         <br>
                                        
                                       		
@@ -249,14 +277,15 @@ function hideImage(elemId) {
            
    
     
-                      <!-- <h2 style="padding-top: 70px;"><b>Light Brown Cloth Sofa</b></h2> 
+                      <h2 ><b>Light Brown Cloth Sofa</b></h2> 
     
-                      <br> -->
-                      <h3 style="padding-top: 70px;"><b>Dimensions</b></h3>
+                      <br> 
+                      <h3 ><b>Dimensions</b></h3>
+                   
                       <div class="tabs" >
                             <div class="tab">
                                         <input type="checkbox" id="chck3">
-                                        <label class="tab-label" for="chck3">Environment<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                        <label class="tab-label" for="chck3">Dimensions<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
                                           <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                                         </svg></label>
                                       <div class="tab-content">

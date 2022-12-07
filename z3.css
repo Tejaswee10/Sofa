@@ -15,10 +15,11 @@ model-viewer{
 display: block;
 height: 85vh;
 width: 100%;
-padding: 25px 0 25px 25px;
+padding: 100px 0 25px 25px;
 
 
 }
+
 
 
 .poster {
@@ -38,16 +39,18 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
+overflow: hidden;
     line-height: 1.5;
     font-size: 13px;
-  
     font-family:Abhaya Libre ExtraBold;
-    margin: 60px;
+  
     
 	
 }
-
+section h2{
+  padding-top: 70px;
+}
+ 
 
 
 @keyframes gradient {
@@ -89,6 +92,7 @@ body {
 .nav a img{
     height: auto;
     width: 40px;
+    
 }
 .nav a:hover{
   background-color:#008888;
@@ -102,6 +106,83 @@ body {
   float: right;
   margin-left: 470px;
 }
+.nav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+	model-viewer{
+		padding: 25px 25px 0 25px;
+	}
+	section h2{
+    padding-top: 0px;
+      }
+   
+    
+	
+
+	model-viewer{
+		height: 50vh;
+		width: 100%;
+	}
+
+	.playground{
+		height: calc(100% - 50px);
+		padding-bottom: 20px;
+		max-width: 300px;
+		margin: auto;
+	}
+
+	.AutoRotate{
+		margin-top: 10px;
+	}
+
+  .content-text{
+		font-size: 17px !important;
+	}
+
+	.content-label{
+		font-size: 15px !important;
+	}
+
+
+	#auto-rotate-id {
+		height: 20px;
+		width: 30px;
+		margin-left: 15px;
+		margin-top: 1px;
+	}
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+
+}
+}
+
+@media screen and (max-width: 767px) {
+
+
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  
+  }
+}
+
+
+
+
+
+
+
 
 
 .EnvironmentImage{
@@ -266,97 +347,12 @@ text-align: center;
 
 
 
-	.content-text{
-		font-size: 17px !important;
-	}
 
-	.content-label{
-		font-size: 15px !important;
-	}
-
-	#model-controls{
-		display: flex;
-		justify-content: space-evenly;
-		width: 100%;
-		margin-top: 20px;
-	}
-
-	.reset-view-btn{
-		width: 35px;
-		height: 35px;
-		margin-bottom: 0px;
-	}
-	
-
-	.reset-model-btn{
-		width: 35px;
-		height: 35px;
-	}
-
-	.reset-view-btn img{
-		width: auto;
-		height: 22px;
-	}
-
-	.reset-model-btn img{
-		width: auto;
-		height: 20px;
-	}
 
 
 }
 
 
 
-
-@media screen and (max-width: 767px) {
-	model-viewer{
-		padding: 25px 25px 0 25px;
-	}
-
-	#title h1{
-		text-align: center;
-	}
-
-	#title span{
-		display: block;
-		text-align: center;
-	}
-
-	model-viewer{
-		height: 50vh;
-		width: 100%;
-	}
-
-	.playground{
-		height: calc(100% - 50px);
-		padding-bottom: 20px;
-		max-width: 300px;
-		margin: auto;
-	}
-
-	.AutoRotate{
-		margin-top: 10px;
-	}
-
-	#auto-rotate-id {
-		height: 20px;
-		width: 30px;
-		margin-left: 15px;
-		margin-top: 1px;
-	}
-
-
-}
-
-
-@media screen and (max-width: 767px) {
-
-	.appearance-btn{
-		height: 40px;
-		width: 40px;
-	}
-
-}
 
 
