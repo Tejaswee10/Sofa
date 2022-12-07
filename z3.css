@@ -1,0 +1,362 @@
+#main {
+	max-height: 100vh;
+    font-family: Abhaya Libre ExtraBold;
+    margin-top: 60px;
+    
+}
+.model{
+position: relative;
+height: 70;
+
+}
+
+model-viewer{
+    
+display: block;
+height: 85vh;
+width: 100%;
+padding: 25px 0 25px 25px;
+
+
+}
+
+
+.poster {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+top: 0;
+left: 0;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+body {
+    background: url('https://tse2.mm.bing.net/th?id=OIP.U1e6ZC4nfHlsZGfnQFfoawHaD4&pid=Api&P=0 ') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    line-height: 1.5;
+    font-size: 13px;
+  
+    font-family:Abhaya Libre ExtraBold;
+    margin: 60px;
+    
+	
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.nav{
+
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+  font-family: Abhaya Libre ExtraBold;
+  background: linear-gradient(-45deg, #ffc0ad, #e73c7e, #71bfdc, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 6s ease infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+.nav a{
+    padding: 14px 16px;
+    float: left;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500px;
+
+}
+.nav a img{
+    height: auto;
+    width: 40px;
+}
+.nav a:hover{
+  background-color:#008888;
+  color: white;
+}
+.nav a.active{
+    background-color:#008888;
+    color: white;
+}
+.nav form{
+  float: right;
+  margin-left: 470px;
+}
+
+
+.EnvironmentImage{
+	margin-top: 10px;
+	padding: 1em ;
+	
+}
+
+.EnvironmentImage label{
+	display: block;
+	font-size:24px;
+
+	font-size:medium; 
+	font-family: Abhaya Libre ExtraBold;
+	
+}
+
+.EnvironmentImage select{
+	width: 100%;
+	height: 40px;
+	padding: 5px 20px;
+	border-radius: 40px;
+	
+	background-color: #ffffff;
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+	font-family: Abhaya Libre ExtraBold;
+	
+	cursor: pointer;
+}
+
+
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    
+  }
+  
+  .row {
+    display: flex;
+  }
+  .row .col {
+    flex: 1;
+  }
+  .row .col:last-child {
+    margin-left: 1em;
+  }
+  
+  /* Accordion styles */
+  .tabs {
+    width: 80%;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+
+  }
+  
+  .tab {
+    color: white;
+    overflow: hidden;
+    
+  }
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: rgba(0, 150, 136, 0.8);
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */
+  }
+  .tab-label:hover {
+    background: linear-gradient(-45deg, #ffc0ad, #e73c7e, #71bfdc, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 6s ease infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .tab-label::after {
+   
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.25s;
+  }
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    backdrop-filter: blur(14px);
+    transition: all 0.25s;
+  }
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: rgba(0, 150, 136, 0.8);
+    cursor: pointer;
+  }
+  .tab-close:hover {
+    background: #1a252f;
+  }
+  
+  .tab input:checked + .tab-label {
+    background: rgba(0, 150, 136, 0.8);
+  }
+  .tab input:checked + .tab-label::after {
+    transform: rotate(90deg);
+  }
+  .tab input:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+
+  .appearance-btn{
+	height: 45px;
+	width: 45px;
+	background: #FC3424;
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	border: none;
+	margin-top: 10px;
+	
+}
+
+.appearance1-btn{
+	height: 45px;
+	width: 45px;
+	
+	box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	border: none;
+	margin-top: 10px;
+	
+}
+
+#hdris2{
+align-items: center;
+text-align: center;
+}
+
+
+.tab button:hover {
+	border-radius: 10;
+	border-color: rgb(208, 233, 255);
+	border-width: 3px;
+	border-style: solid;
+	
+  }
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+
+	.EnvironmentImage{
+		margin-top: 25px;
+	}
+
+
+
+	.content-text{
+		font-size: 17px !important;
+	}
+
+	.content-label{
+		font-size: 15px !important;
+	}
+
+	#model-controls{
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.reset-view-btn{
+		width: 35px;
+		height: 35px;
+		margin-bottom: 0px;
+	}
+	
+
+	.reset-model-btn{
+		width: 35px;
+		height: 35px;
+	}
+
+	.reset-view-btn img{
+		width: auto;
+		height: 22px;
+	}
+
+	.reset-model-btn img{
+		width: auto;
+		height: 20px;
+	}
+
+
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+	model-viewer{
+		padding: 25px 25px 0 25px;
+	}
+
+	#title h1{
+		text-align: center;
+	}
+
+	#title span{
+		display: block;
+		text-align: center;
+	}
+
+	model-viewer{
+		height: 50vh;
+		width: 100%;
+	}
+
+	.playground{
+		height: calc(100% - 50px);
+		padding-bottom: 20px;
+		max-width: 300px;
+		margin: auto;
+	}
+
+	.AutoRotate{
+		margin-top: 10px;
+	}
+
+	#auto-rotate-id {
+		height: 20px;
+		width: 30px;
+		margin-left: 15px;
+		margin-top: 1px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 767px) {
+
+	.appearance-btn{
+		height: 40px;
+		width: 40px;
+	}
+
+}
+
+
