@@ -10,18 +10,19 @@
 
 <style>
 
-  		#section1 {
-			
-       
-  height: 1000px;
-		}
-    #section2{
+#section1 {
+  height: inherit;
+	}
+#section2{
   display: none;
   height: inherit;
-    }
+}
+#section3{
+  display: none;
+  height: inherit;
+}
 
-
-    .wrapper{
+.wrapper{
   width:auto;
   height: 700px;
   overflow: hidden;
@@ -31,18 +32,15 @@
 .scrolling{
   
 position: inherit;
-
-  padding: 1em;
-  overflow-y: scroll;
- 
-  width:520px;
-
+padding: 1em;
+overflow-y: scroll;
+width:520px;
 height: 700px;
-    scroll-behavior: smooth;
-
-
-  
+scroll-behavior: smooth;
 }
+
+
+  	
 </style>
 
 
@@ -50,13 +48,15 @@ height: 700px;
 
 <body >
   <div class="nav" id="myTopnav">
-    <a id="home" class="btn btn-lg " href="#" style="padding-top: 10px;">
+    <a id="home" class="btn btn-lg " href="https://viscommerce.com/" style="padding-top: 10px;">
         <img src="VisCommerce_Company_Logo-red.webp"/> Home</a>
-  <a class="btn btn-lg " href="#section1" onclick="hidefunc()" >Configuration</a>
+     
+  <a class="btn btn-lg " href="#section1" onclick="sec1()" >Configuration</a>
   
-  <a class="btn btn-lg" href="#section2" onclick="showfunc()">Dimensions</a>
-  
+  <a class="btn btn-lg" href="#section2" onclick="sec2()">Dimensions</a>
+  <a class="btn btn-lg" href="#section3" onclick="sec3()" >Environment</a> 
   <a class="btn btn-lg" href="#" onclick="resetView()"> Reset View</a>
+  <a class="btn btn-lg" href="#" onclick="reload()"> Reload model</a>
   <a class="btn btn-lg" href="#" onclick="InsceneLoad()">InScene View</a>
    <!--<a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -76,18 +76,35 @@ height: 700px;
       }
     }
 
-function hidefunc(){
+function sec1(){
   const sec1=document.getElementById("section1")
       sec1.style.display="block";
   const sec2=document.getElementById("section2")
       sec2.style.display="none";
+      const sec3=document.getElementById("section3")
+      sec3.style.display="none";
 }
 
-    function showfunc(){
+    function sec2(){
       const sec2=document.getElementById("section2")
       sec2.style.display="block";
       const sec1=document.getElementById("section1")
       sec1.style.display="none";
+      const sec3=document.getElementById("section3")
+      sec3.style.display="none";
+
+
+    }
+
+    function sec3(){
+      const sec2=document.getElementById("section2")
+      sec2.style.display="none";
+      const sec1=document.getElementById("section1")
+      sec1.style.display="none";
+      const sec3=document.getElementById("section3")
+      sec3.style.display="block";
+
+
     }
     
     </script>
@@ -140,73 +157,7 @@ function hidefunc(){
 
                   <br>
                   <h3 ><b>Configuration</b></h3>
-                  <div class="tabs" >
-                        <div class="tab">
-                                    <input type="checkbox" id="chck0">
-                                    <label class="tab-label" for="chck0">Environment<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                                      <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                                    </svg></label>
-                                  <div class="tab-content">
-                                        Customize your Environment
-                                        <br>
-                                       
-                                      		
-                                            <button class="appearance-btn hdris " id="hdris" style="background-image: url('sepulchral_chapel_rotunda_4k.jpg') " value="sepulchral_chapel_rotunda_4k.hdr;sepulchral_chapel_rotunda_4k.jpg"
-                                            data-name="CheckerPattern" onmouseover="showImage('imageSmall','sepulchral_chapel_rotunda_4k.jpg')"
-                                            onmouseout="hideImage('imageSmall')"></button><label for="hdris" style="top: -20px; position: relative;"> kiara Interior</label>
-                                            <br>
-                            <button class="appearance1-btn hdris" id="hdris1" style="background-image: url('brown_photostudio_01_4k.jpg')" value="brown_photostudio_01_4k.hdr;brown_photostudio_01_4k.jpg"
-                                            data-name="DiamondPattern" onmouseover="showImage('imageSmall','brown_photostudio_01_4k.jpg')"
-                                            onmouseout="hideImage('imageSmall')"></button><label for="hdris1" style="top: -20px; position: relative;"> Reading Room</label>
-                                            <br>
-                            <button class="appearance1-btn hdris" id="hdris2" style="background-image: url('scythian_tombs_4k.jpg')" value="scythian_tombs_4k.hdr;scythian_tombs_4k.jpg"
-                                            data-name="LeafPattern" onmouseover="showImage('imageSmall','scythian_tombs_4k.jpg')"
-                                            onmouseout="hideImage('imageSmall')"></button><label for="hdris2" style="top: -20px; position: relative;"> Residential Garden</label>
-                                          
-                                  </div>
-                        </div>
-                  </div>
-
-
-
-<script>
-function showImage(elemId, imgSrc) {
-  console.log("Mouse is over text");
-  console.log("\tElemId:" + elemId + " Image Source:" + imgSrc);
-  const elem = document.getElementById("hdris");
-  const popImage = new Image();
-  popImage.src = imgSrc;
-  popImage.style.position = "absolute";
-  popImage.style.width = "250px";
-  popImage.style.borderColor="black";
-  popImage.style.borderWidth="20px";
-  popImage.style.borderRadius="20px";
-  popImage.style.height = "150px";
-  popImage.style.top = "0px";
-  popImage.style.left = "70px";
-  popImage.style.zIndex = "9999";
-  elem.appendChild(popImage);
-
-
-}
-
-function hideImage(elemId) {
-  console.log("Mouse is off text");
-  console.log("\tElemId:" + elemId);
-  const elem = document.getElementById("hdris");
-  while (elem.childElementCount > 0) {
-    elem.removeChild(elem.lastChild);
-  }
-}
-
-
-
-
-
-</script>
-
-
-
+             
 <br/>
                   <div class="tabs">
                           <div class="tab">
@@ -303,11 +254,113 @@ function hideImage(elemId) {
       <!-- sec2-->
   </section> 
 
+<section id="section3">
+
+<h2 ><b>Light Brown Cloth Sofa</b></h2> 
+    
+<br> 
+<h3 ><b>Environment</b></h3>
+<div id="hd" >
+      <button
+      id="imageSmall" type="button"
+      onmouseover="showImage1('imageSmall','hdri/reading_room_4k.jpg')"
+      onmouseout="hideImage1('imageSmall')"
+
+      value="hdri/reading_room_4k.hdr;hdri/reading_room_4k.jpg"> Reading Room</button>
+
+      <br>
+      <button
+      id="imageSmall" type="button"
+      onmouseover="showImage1('imageSmall','hdri/residential_garden_4k.jpg')"
+      onmouseout="hideImage1('imageSmall')"
+
+      value="hdri/residential_garden_4k.hdr;hdri/residential_garden_4k.jpg" >Residential garden</button>
+            
+      <br>
+      <button
+      id="imageSmall" type="button"
+      onmouseover="showImage1('imageSmall','hdri/kiara_interior_0.5k.jpg')"
+      onmouseout="hideImage1('imageSmall')"
+
+      value="hdri/kiara_interior_0.5k.hdr;hdri/kiara_interior_0.5k.jpg"> kiara_interior</button>
+      <br>
+      <button
+      id="imageSmall" type="button"
+      onmouseover="showImage1('imageSmall','hdri/Building.jpg')"
+      onmouseout="hideImage1('imageSmall')"
+
+      value="hdri/Building.hdr;hdri/Building.jpg"> Building</button>
+
+      <br>
+      <button
+      id="imageSmall" type="button"
+      onmouseover="showImage1('imageSmall','hdri/Indoor.jpg')"
+      onmouseout="hideImage1('imageSmall')"
+  
+      value="hdri/Indoor.hdr;hdri/Indoor.jpg">Indoor</button>
+
+      <br>
+
+      <button
+      id="imageSmall" type="button"
+      onmouseover="showImage1('imageSmall','hdri/Residential.jpg')"
+      onmouseout="hideImage1('imageSmall')"
+
+      value="hdri/Residential.hdr;hdri/Residential.jpg" >Residential</button>
+
+</div>
+ <!-- sec3--> 
+</section>
+
+<!--environment image buttons script-->
+<script>
+  var modelviewer10 = document.getElementById("model-viewer-id");
+
+  
+
+  document.querySelector("#hd").addEventListener("click", (event) => {
+      x = event.target.value;
+      temp = new Array();
+      temp = x.split(";");
+      y = temp[0];
+      z = temp[1];
+      modelviewer10.setAttribute("environment-image", y);
+      modelviewer10.setAttribute("skybox-image", z);
+  });
+
+
+
+</script>
+
+
 
    
        
         
+  <script>function showImage1(elemId, imgSrc) {
+    console.log("Mouse is over text");
+    console.log("\tElemId:" + elemId + " Image Source:" + imgSrc);
+    const elem = document.getElementById("imageSmall");
+    const popImage = new Image();
+    popImage.src = imgSrc;
+    popImage.style.width="200px"; 
+    popImage.style.height="115px";
+    popImage.style.position = "absolute";
+popImage.style.top="80px";
+    popImage.style.transition="all 2s";
+    popImage.style.zIndex = "1";
+    elem.appendChild(popImage);
+  }
   
+  function hideImage1(elemId) {
+  console.log("Mouse is off text");
+  console.log("\tElemId:" + elemId);
+  const elem = document.getElementById("imageSmall");
+  while (elem.childElementCount > 0) {
+    elem.removeChild(elem.lastChild);
+  }
+}
+  </script>
 
 
 
@@ -353,49 +406,12 @@ function hideImage(elemId) {
 
   const modelviewer = document.getElementById("model-viewer-id");
   
-      
-  
-  document.querySelector("#hdris").addEventListener("click", (event) => {
-      x = event.target.value;
-      temp = new Array();
-      temp = x.split(";");
-      y = temp[0];
-      z = temp[1];
-      modelviewer.setAttribute("environment-image", y);
-      modelviewer.setAttribute("skybox-image", z);
-  });
-  
-  document.querySelector("#hdris1").addEventListener("click", (event) => {
-      x = event.target.value;
-      temp = new Array();
-      temp = x.split(";");
-      y = temp[0];
-      z = temp[1];
-      modelviewer.setAttribute("environment-image", y);
-      modelviewer.setAttribute("skybox-image", z);
-  });
-  
-  document.querySelector("#hdris2").addEventListener("click", (event) => {
-      x = event.target.value;
-      temp = new Array();
-      temp = x.split(";");
-      y = temp[0];
-      z = temp[1];
-      modelviewer.setAttribute("environment-image", y);
-      modelviewer.setAttribute("skybox-image", z);
-  });
-  
-  
-  
-  document.querySelector('#sofaColorControls').addEventListener('click', (event) => {
+document.querySelector('#sofaColorControls').addEventListener('click', (event) => {
                         const colorString = event.target.dataset.color;
                         const material1 = modelviewer.model.materials[1];
                         material1.pbrMetallicRoughness.setBaseColorFactor(colorString);
                       });
-  
-  
-                     
-      document.querySelector('#mySidepanelPillow').addEventListener('click', (event) => {
+document.querySelector('#mySidepanelPillow').addEventListener('click', (event) => {
                             const colorString = event.target.dataset.color;
                             const material0 = modelviewer.model.materials[0];
                             material0.pbrMetallicRoughness.setBaseColorFactor(colorString);
